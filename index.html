@@ -163,6 +163,14 @@
     100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
   }
 
+  /* ── CENTERED SECTION WRAPPER ── */
+  .centered-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
   /* ── SECTIONS ── */
   section {
     padding: 5rem 2rem;
@@ -308,12 +316,7 @@
 
   /* ── WISHES ── */
   #wishes {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px;
-    padding: 3rem 2rem;
-    margin: 0 auto 4rem;
-    max-width: 900px;
+    background: transparent;
   }
 
   .wish-card {
@@ -328,6 +331,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s;
+    text-align: left;
   }
   .wish-card.visible { opacity: 1; transform: translateY(0); }
   .wish-card .wish-from { 
@@ -531,7 +535,7 @@
 <hr class="divider">
 
 <!-- ── CHOOSE YOUR ADVENTURE ── -->
-<div id="adventure-game" style="max-width:900px; margin:0 auto; padding:5rem 2rem; text-align:center;">
+<div id="adventure-game" class="centered-section" style="text-align:center;">
   <div class="section-label">🎮 choose your own adventure</div>
   <h2 class="section-title" style="margin-bottom:0.5rem;">A Day in the Life of Ami 🌸</h2>
   <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:rgba(255,255,255,0.5); margin-bottom:0.6rem;">It's your birthday. Every choice matters. (I'm watching. I remember everything.)</p>
@@ -553,7 +557,7 @@
 <hr class="divider" style="margin-top:4rem;">
 
 <!-- ── PRANKS ── -->
-<div id="pranks" style="max-width:900px; margin:0 auto; padding:5rem 2rem; text-align:center;">
+<div id="pranks" class="centered-section" style="text-align:center;">
   <div class="section-label">🚨 danger zone</div>
   <h2 class="section-title">Tempting Buttons</h2>
   <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:rgba(255,255,255,0.5);">
@@ -616,7 +620,7 @@
 <hr class="divider" style="margin-top:4rem;">
 
 <!-- ── WISHES ── -->
-<div id="wishes" style="margin: 0 2rem;">
+<div id="wishes" style="max-width:900px; margin:0 auto 4rem; padding:3rem 2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:24px; text-align:center;">
   <div class="section-label">💌 from your bestie, with love</div>
   <h2 class="section-title">My Wishes for You, Ami</h2>
 
