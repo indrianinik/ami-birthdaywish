@@ -539,107 +539,46 @@
 
 <hr class="divider">
 
-<!-- ── CHOOSE YOUR ADVENTURE ── -->
-<div id="adventure-game" class="centered-section" style="text-align:center;">
-  <div class="section-label">🎮 choose your own adventure</div>
-  <h2 class="section-title" style="margin-bottom:0.5rem;">A Day in the Life of Ami 🌸</h2>
-  <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:rgba(255,255,255,0.5); margin-bottom:0.6rem;">It's your birthday. Every choice matters. (I'm watching. I remember everything.)</p>
-  <p style="font-family:'Caveat',cursive; font-size:1.05rem; color:rgba(255,255,255,0.3); margin-bottom:2rem;">There are 8 different endings — play as many times as you want, bro. You have all day. Literally. 🎉</p>
-
-  <div id="story-box" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:2rem 2rem 1.5rem; max-width:680px; margin:0 auto; text-align:left;">
-    <div id="scene-emoji" style="font-size:3rem; margin-bottom:1rem; text-align:center; transition:all 0.3s;">🌅</div>
-    <p id="scene-text" style="font-family:'Caveat',cursive; font-size:1.35rem; line-height:1.7; color:rgba(255,255,255,0.88); margin-bottom:1.5rem;"></p>
-    <div id="scene-choices" style="display:flex; flex-direction:column; gap:0.8rem;"></div>
-    <div id="scene-ending" style="display:none; text-align:center; margin-top:1.2rem;">
-      <div id="ending-badge" style="display:inline-block; background:var(--yellow); color:var(--dark); font-family:'Space Mono',monospace; font-size:0.7rem; font-weight:700; padding:6px 18px; border-radius:999px; letter-spacing:2px; margin-bottom:1rem;"></div>
-      <p id="ending-note" style="font-family:'Caveat',cursive; font-size:1.15rem; color:rgba(255,255,255,0.5); line-height:1.6;"></p>
-      <button onclick="restartAdventure()" style="margin-top:1.2rem; background:transparent; border:2px solid rgba(255,255,255,0.2); color:var(--white); font-family:'Space Mono',monospace; font-size:0.75rem; padding:0.6rem 1.4rem; border-radius:999px; cursor:none; transition:all 0.2s;" onmouseover="this.style.borderColor='var(--yellow)';this.style.color='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='var(--white)'">&#8635; Play Again</button>
-    </div>
-  </div>
-  <div id="story-trail" style="text-align:center; margin-top:1.2rem; font-family:'Space Mono',monospace; font-size:0.65rem; color:rgba(255,255,255,0.2); letter-spacing:1px; min-height:1.2rem;"></div>
-</div>
-
-<hr class="divider" style="margin-top:4rem;">
-
 <!-- ── PRANKS ── -->
 <div id="pranks" class="centered-section" style="text-align:center;">
-  <div class="section-label">🚨 danger zone</div>
-  <h2 class="section-title">Tempting Buttons</h2>
+  <div class="section-label">🪽 proceed with curiosity</div>
+  <h2 class="section-title">Try Your Birthday Luck 🪽</h2>
   <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:rgba(255,255,255,0.5);">
     These are totally safe. Definitely press them all. No reason not to. 😇
   </p>
-
   <div class="prank-grid">
-    <button class="prank-btn" style="border-color:rgba(77,255,160,0.3);" onclick="doPrank(this, 0)">
-      <span class="btn-icon">🌱</span>
-      Rate My Plant Care
-    </button>
-    <button class="prank-btn" style="border-color:rgba(77,255,160,0.3);" onclick="doPrank(this, 1)">
-      <span class="btn-icon">🪴</span>
-      My Plants Love Me
-    </button>
-    <button class="prank-btn" style="border-color:rgba(91,200,255,0.3);" onclick="doPrank(this, 2)">
-      <span class="btn-icon">🏋️</span>
-      Gym Progress Check
-    </button>
-    <button class="prank-btn" style="border-color:rgba(91,200,255,0.3);" onclick="doPrank(this, 3)">
-      <span class="btn-icon">💪</span>
-      I Crushed Leg Day
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 4)">
-      <span class="btn-icon">🌿</span>
-      New Plant, New Me
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 5)">
-      <span class="btn-icon">🏆</span>
-      Claim Gym Trophy
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 6)">
-      <span class="btn-icon">🚩</span>
-      He's Different Though
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 7)">
-      <span class="btn-icon">🙄</span>
-      He's Not Like Other Guys
-    </button>
-    <button class="prank-btn" style="border-color:rgba(192,132,252,0.3);" onclick="doPrank(this, 8)">
-      <span class="btn-icon">💀</span>
-      He Was Actually Decent
-    </button>
-    <button class="prank-btn" style="border-color:rgba(192,132,252,0.3);" onclick="doPrank(this, 9)">
-      <span class="btn-icon">🫀</span>
-      Rate My Dating Life
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 10)">
-      <span class="btn-icon">😮‍💨</span>
-      I'll Take Your Advice
-    </button>
-    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 11)">
-      <span class="btn-icon">🥹</span>
-      How Are You Holding Up
-    </button>
+    <button class="prank-btn" style="border-color:rgba(77,255,160,0.3);" onclick="doPrank(this, 0)"><span class="btn-icon">🌱</span>Rate My Plant Care</button>
+    <button class="prank-btn" style="border-color:rgba(77,255,160,0.3);" onclick="doPrank(this, 1)"><span class="btn-icon">🪴</span>My Plants Love Me</button>
+    <button class="prank-btn" style="border-color:rgba(91,200,255,0.3);" onclick="doPrank(this, 2)"><span class="btn-icon">🏋️</span>Gym Progress Check</button>
+    <button class="prank-btn" style="border-color:rgba(91,200,255,0.3);" onclick="doPrank(this, 3)"><span class="btn-icon">💪</span>I Crushed Leg Day</button>
+    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 4)"><span class="btn-icon">🌿</span>New Plant, New Me</button>
+    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 5)"><span class="btn-icon">🏆</span>Claim Gym Trophy</button>
+    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 6)"><span class="btn-icon">🚩</span>He's Different Though</button>
+    <button class="prank-btn" style="border-color:rgba(255,107,157,0.3);" onclick="doPrank(this, 7)"><span class="btn-icon">🙄</span>He's Not Like Other Guys</button>
+    <button class="prank-btn" style="border-color:rgba(192,132,252,0.3);" onclick="doPrank(this, 8)"><span class="btn-icon">💀</span>He Was Actually Decent</button>
+    <button class="prank-btn" style="border-color:rgba(192,132,252,0.3);" onclick="doPrank(this, 9)"><span class="btn-icon">🫀</span>Rate My Dating Life</button>
+    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 10)"><span class="btn-icon">😮‍💨</span>I'll Take Your Advice</button>
+    <button class="prank-btn" style="border-color:rgba(255,233,78,0.3);" onclick="doPrank(this, 11)"><span class="btn-icon">🥹</span>How Are You Holding Up</button>
   </div>
   <div class="prank-result" id="prank-result"></div>
 </div>
 
-<hr class="divider" style="margin-top:4rem;">
-
-<!-- ── WISHES ── -->
+<hr class="divider">
 <div id="wishes" style="max-width:900px; margin:0 auto 4rem; padding:3rem 2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:24px; text-align:center;">
   <div class="section-label">💌 from your bestie, with love</div>
   <h2 class="section-title">My Wishes for You, Ami</h2>
 
   <div id="wish-list">
     <div class="wish-card visible">
-      <div class="wish-text-body">In the stillness of my world, thank you for being the summer breeze. I sometimes get afraid about you being too close of a tornado, but I love you the most still lol. Thank you for befriending me even when I'm too much of a nerd who is socially challenged. 21 years and beyond… and I'm glad I have you. 🫶🌸</div>
+      <div class="wish-text-body">In the stillness of my world, thank you for being the summer breeze. I sometimes get afraid of you being too close to a tornado, but I love you the most still lol. Thank you for befriending me even when I'm too much of a nerd who is socially challenged. 21 years and beyond… and I'm glad I have you. 🫶🌸</div>
       <span class="wish-from">— your nerdy and slightly autistic bestie who made this website for you only 🤓💛</span>
     </div>
     <div class="wish-card visible" style="transition-delay:0.15s">
-      <div class="wish-text-body">May your birthday be as fabulous as you kill the dress, as sexy as how you destroy the leg press, as unhinged as your dating stories, and as cozy as how we talk about bowel issues when we're FaceTiming. Love you, Mama! 😂🫶</div>
+      <div class="wish-text-body">May your birthday be as fabulous as you look killing the dress, as powerful as how you destroy the leg press, as unhinged as your dating stories, and as cozy as how we talk about bowel issues when we're FaceTiming. Love you, Mama! 😂🫶</div>
       <span class="wish-from">— also the same bestie who terrorizes your TikTok inbox 😈💀</span>
     </div>
     <div class="wish-card visible" style="transition-delay:0.3s">
-      <div class="wish-text-body">Here's to another year of me calling you "Dude", "Bro", "Man" even when I know you're the prettiest in the room (I won't say it with my mouth, still). Thanks for being born and adopting me as your friend. You are my person. And if a man doesn't treat you better than how your friends celebrate you — demolish him. 🔨👑</div>
+      <div class="wish-text-body">Here's to another year of me calling you "Dude", "Bro", "Man" — even when I know you're the prettiest in the room (I won't say it out loud, still). Thanks for being born and letting me call you my friend. You are my person. And if a man doesn't treat you better than how your friends celebrate you — demolish him. 🔨👑</div>
       <span class="wish-from">— your #1 man-hater unless he can outdo how I treasure you 🥹🚩</span>
     </div>
   </div>
@@ -655,94 +594,173 @@
   <!-- Bouquet display -->
   <div id="flower-garden" style="display:none; margin-top:2rem; text-align:center;">
     <div id="bouquet-wrap" style="display:inline-block; animation:popIn 0.6s cubic-bezier(0.34,1.56,0.64,1);">
-      <svg viewBox="0 0 320 420" width="280" height="370" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 20px 40px rgba(255,107,157,0.3));">
-        <!-- Wrapping paper -->
-        <polygon points="60,300 160,420 260,300" fill="#FF6B9D" opacity="0.85"/>
-        <polygon points="80,300 160,400 240,300" fill="#FFB3D0" opacity="0.6"/>
-        <polygon points="100,300 160,380 220,300" fill="#fff" opacity="0.15"/>
+      <svg viewBox="0 0 300 420" width="280" height="390" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 20px 60px rgba(180,100,140,0.3));">
+        <defs>
+          <radialGradient id="pg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffc2d4"/>
+            <stop offset="100%" stop-color="#ff6b9d"/>
+          </radialGradient>
+          <radialGradient id="rg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ff8fa8"/>
+            <stop offset="100%" stop-color="#c0203c"/>
+          </radialGradient>
+          <radialGradient id="mg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e8c8d8"/>
+            <stop offset="100%" stop-color="#9a6880"/>
+          </radialGradient>
+          <radialGradient id="pg2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffdcc4"/>
+            <stop offset="100%" stop-color="#e8905a"/>
+          </radialGradient>
+          <radialGradient id="wg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#e8ddd0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- ── WRAP ── -->
+        <path d="M100,305 Q150,480 150,480 L150,480 Q150,480 100,305 Z" fill="#d4547a" opacity="0.9"/>
+        <path d="M200,305 Q150,480 150,480 L150,480 Q150,480 200,305 Z" fill="#b83a60" opacity="0.9"/>
+        <path d="M100,305 Q125,400 150,480 Q130,430 118,360 Z" fill="#e8789a" opacity="0.6"/>
+        <path d="M200,305 Q175,400 150,480 Q170,430 182,360 Z" fill="#c04870" opacity="0.5"/>
+        <!-- Wrap texture dots -->
+        <circle cx="138" cy="370" r="2.5" fill="white" opacity="0.18"/>
+        <circle cx="158" cy="395" r="2" fill="white" opacity="0.14"/>
+        <circle cx="145" cy="415" r="2" fill="white" opacity="0.12"/>
+        <circle cx="162" cy="355" r="1.8" fill="white" opacity="0.18"/>
         <!-- Ribbon -->
-        <ellipse cx="160" cy="300" rx="18" ry="10" fill="#FFE94E"/>
-        <path d="M142,300 Q130,280 118,295" stroke="#FFE94E" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M178,300 Q190,280 202,295" stroke="#FFE94E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M140,307 Q122,282 132,268 Q142,257 152,270 Q156,280 150,300" fill="#ffe082" opacity="0.95"/>
+        <path d="M160,307 Q178,282 168,268 Q158,257 148,270 Q144,280 150,300" fill="#ffd54f" opacity="0.95"/>
+        <ellipse cx="150" cy="305" rx="9" ry="6" fill="#ffe082"/>
+        <path d="M143,310 Q134,325 130,338" stroke="#ffe082" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M157,310 Q166,325 170,338" stroke="#ffd54f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- Stems -->
-        <path d="M130,295 Q125,240 118,180" stroke="#4a7c4e" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M148,295 Q145,235 140,160" stroke="#5a8f5e" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M160,295 Q160,230 158,155" stroke="#4a7c4e" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M172,295 Q175,235 180,165" stroke="#5a8f5e" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M190,295 Q195,240 202,185" stroke="#4a7c4e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- ── STEMS ── -->
+        <path d="M142,305 Q136,258 126,200" stroke="#4a7c50" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M148,303 Q144,248 138,178" stroke="#3d6b42" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M152,302 Q152,244 150,165" stroke="#4a7c50" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M156,302 Q160,245 164,172" stroke="#3d6b42" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M162,303 Q170,255 178,195" stroke="#4a7c50" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M168,305 Q180,265 194,218" stroke="#3d6b42" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <path d="M136,305 Q126,272 114,232" stroke="#4a7c50" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 
-        <!-- Leaves -->
-        <ellipse cx="122" cy="220" rx="14" ry="7" fill="#5aad5e" transform="rotate(-30 122 220)" opacity="0.9"/>
-        <ellipse cx="185" cy="225" rx="14" ry="7" fill="#5aad5e" transform="rotate(30 185 225)" opacity="0.9"/>
-        <ellipse cx="143" cy="210" rx="12" ry="6" fill="#6abf6e" transform="rotate(15 143 210)" opacity="0.8"/>
-        <ellipse cx="170" cy="215" rx="12" ry="6" fill="#6abf6e" transform="rotate(-15 170 215)" opacity="0.8"/>
+        <!-- ── LEAVES ── -->
+        <path d="M136,262 Q112,248 108,228 Q124,232 138,250 Z" fill="#5aaa5e" opacity="0.9"/>
+        <path d="M162,255 Q186,240 190,220 Q174,226 162,244 Z" fill="#5aaa5e" opacity="0.9"/>
+        <path d="M142,222 Q120,210 116,192 Q132,197 144,212 Z" fill="#70c275" opacity="0.8"/>
+        <path d="M158,218 Q180,205 183,187 Q168,193 157,208 Z" fill="#70c275" opacity="0.8"/>
 
-        <!-- Rose 1 (center, large, pink) -->
-        <g transform="translate(158,148)">
-          <circle cx="0" cy="0" r="22" fill="#FF6B9D" opacity="0.3"/>
-          <ellipse cx="-8" cy="6" rx="14" ry="10" fill="#FF6B9D" transform="rotate(-30 -8 6)"/>
-          <ellipse cx="8" cy="6" rx="14" ry="10" fill="#e8578a" transform="rotate(30 8 6)"/>
-          <ellipse cx="0" cy="-4" rx="13" ry="9" fill="#FF6B9D" transform="rotate(0 0 -4)"/>
-          <ellipse cx="-5" cy="0" rx="9" ry="7" fill="#ff85b3" transform="rotate(-15 -5 0)"/>
-          <ellipse cx="5" cy="0" rx="9" ry="7" fill="#e8578a" transform="rotate(15 5 0)"/>
-          <circle cx="0" cy="2" r="6" fill="#ff9ec6"/>
-          <circle cx="0" cy="2" r="3" fill="#ffb8d8"/>
+        <!-- ── ROSE: large pink center ── -->
+        <g transform="translate(150,152)">
+          <!-- outer petals -->
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#f06090"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#e8789a" transform="rotate(51.4)"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#f06090" transform="rotate(102.8)"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#e8789a" transform="rotate(154.2)"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#f06090" transform="rotate(205.6)"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#e8789a" transform="rotate(257)"/>
+          <path d="M0,-26 C12,-18 16,-4 8,4 C4,8 -4,8 -8,4 C-16,-4 -12,-18 0,-26 Z" fill="#f06090" transform="rotate(308.4)"/>
+          <!-- inner petals -->
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ffa0bc" transform="rotate(25)"/>
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ff8aaa" transform="rotate(77)"/>
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ffa0bc" transform="rotate(129)"/>
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ff8aaa" transform="rotate(181)"/>
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ffa0bc" transform="rotate(233)"/>
+          <path d="M0,-16 C8,-10 10,-2 5,4 C2,7 -2,7 -5,4 C-10,-2 -8,-10 0,-16 Z" fill="#ff8aaa" transform="rotate(285)"/>
+          <!-- centre -->
+          <circle cx="0" cy="0" r="8" fill="#ffd0dc"/>
+          <circle cx="0" cy="0" r="4.5" fill="#ffb8cc"/>
+          <circle cx="0" cy="0" r="2" fill="#ff8fa8"/>
         </g>
 
-        <!-- Rose 2 (left, red) -->
-        <g transform="translate(118,172)">
-          <circle cx="0" cy="0" r="18" fill="#e03060" opacity="0.2"/>
-          <ellipse cx="-7" cy="5" rx="12" ry="8" fill="#e03060" transform="rotate(-25 -7 5)"/>
-          <ellipse cx="7" cy="5" rx="12" ry="8" fill="#c0204a" transform="rotate(25 7 5)"/>
-          <ellipse cx="0" cy="-3" rx="11" ry="8" fill="#e03060"/>
-          <ellipse cx="-4" cy="1" rx="8" ry="6" fill="#ff4070" transform="rotate(-10)"/>
-          <ellipse cx="4" cy="1" rx="8" ry="6" fill="#c0204a" transform="rotate(10)"/>
-          <circle cx="0" cy="2" r="5" fill="#ff7090"/>
-          <circle cx="0" cy="2" r="2.5" fill="#ffaab8"/>
+        <!-- ── ROSE: deep red left ── -->
+        <g transform="translate(122,192)">
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#c02040"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#a01830" transform="rotate(60)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#c02040" transform="rotate(120)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#a01830" transform="rotate(180)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#c02040" transform="rotate(240)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#a01830" transform="rotate(300)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#e04060" transform="rotate(30)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c03050" transform="rotate(90)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#e04060" transform="rotate(150)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c03050" transform="rotate(210)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#e04060" transform="rotate(270)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c03050" transform="rotate(330)"/>
+          <circle cx="0" cy="0" r="6" fill="#e87080"/>
+          <circle cx="0" cy="0" r="3" fill="#f4a8b8"/>
         </g>
 
-        <!-- Rose 3 (right, peach) -->
-        <g transform="translate(200,178)">
-          <circle cx="0" cy="0" r="18" fill="#ffb07a" opacity="0.25"/>
-          <ellipse cx="-7" cy="5" rx="12" ry="8" fill="#ffb07a" transform="rotate(-25 -7 5)"/>
-          <ellipse cx="7" cy="5" rx="12" ry="8" fill="#e89060" transform="rotate(25 7 5)"/>
-          <ellipse cx="0" cy="-3" rx="11" ry="8" fill="#ffb07a"/>
-          <ellipse cx="-4" cy="1" rx="7" ry="5" fill="#ffc898" transform="rotate(-10)"/>
-          <ellipse cx="4" cy="1" rx="7" ry="5" fill="#e89060" transform="rotate(10)"/>
-          <circle cx="0" cy="2" r="5" fill="#ffd4a8"/>
-          <circle cx="0" cy="2" r="2.5" fill="#ffe8cc"/>
+        <!-- ── ROSE: dusty mauve right ── -->
+        <g transform="translate(178,188)">
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#b07898"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#906078" transform="rotate(60)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#b07898" transform="rotate(120)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#906078" transform="rotate(180)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#b07898" transform="rotate(240)"/>
+          <path d="M0,-20 C10,-13 13,-2 6,5 C3,8 -3,8 -6,5 C-13,-2 -10,-13 0,-20 Z" fill="#906078" transform="rotate(300)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c890a8" transform="rotate(30)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#a87088" transform="rotate(90)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c890a8" transform="rotate(150)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#a87088" transform="rotate(210)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#c890a8" transform="rotate(270)"/>
+          <path d="M0,-12 C6,-7 8,0 4,5 C2,7 -2,7 -4,5 C-8,0 -6,-7 0,-12 Z" fill="#a87088" transform="rotate(330)"/>
+          <circle cx="0" cy="0" r="6" fill="#e0b8cc"/>
+          <circle cx="0" cy="0" r="3" fill="#f0d0e0"/>
         </g>
 
-        <!-- Small blossom left (lavender) -->
-        <g transform="translate(100,195)">
-          <ellipse cx="-8" cy="0" rx="8" ry="5" fill="#C084FC" transform="rotate(-20 -8 0)"/>
-          <ellipse cx="8" cy="0" rx="8" ry="5" fill="#a855f7" transform="rotate(20 8 0)"/>
-          <ellipse cx="0" cy="-8" rx="8" ry="5" fill="#C084FC" transform="rotate(-70 0 -8)"/>
-          <ellipse cx="0" cy="8" rx="8" ry="5" fill="#a855f7" transform="rotate(70 0 8)"/>
-          <circle cx="0" cy="0" r="5" fill="#e9d5ff"/>
-          <circle cx="0" cy="0" r="2.5" fill="#fff"/>
+        <!-- ── ROSE: peach small back-left ── -->
+        <g transform="translate(136,170)">
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#e8905a"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#d07840" transform="rotate(72)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#e8905a" transform="rotate(144)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#d07840" transform="rotate(216)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#e8905a" transform="rotate(288)"/>
+          <circle cx="0" cy="0" r="5.5" fill="#f8c898"/>
+          <circle cx="0" cy="0" r="2.5" fill="#ffe0c0"/>
         </g>
 
-        <!-- Small blossom right (white/cream) -->
-        <g transform="translate(218,200)">
-          <ellipse cx="-7" cy="0" rx="7" ry="4.5" fill="#fff5e0" transform="rotate(-20 -7 0)"/>
-          <ellipse cx="7" cy="0" rx="7" ry="4.5" fill="#fde8c0" transform="rotate(20 7 0)"/>
-          <ellipse cx="0" cy="-7" rx="7" ry="4.5" fill="#fff5e0" transform="rotate(-70 0 -7)"/>
-          <ellipse cx="0" cy="7" rx="7" ry="4.5" fill="#fde8c0" transform="rotate(70 0 7)"/>
-          <circle cx="0" cy="0" r="4.5" fill="#fff9ed"/>
-          <circle cx="0" cy="0" r="2" fill="#FFE94E"/>
+        <!-- ── ROSE: cream small back-right ── -->
+        <g transform="translate(165,168)">
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#f0e8d8"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#e0d0b8" transform="rotate(72)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#f0e8d8" transform="rotate(144)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#e0d0b8" transform="rotate(216)"/>
+          <path d="M0,-15 C7,-9 9,-1 5,5 C2,7 -2,7 -5,5 C-9,-1 -7,-9 0,-15 Z" fill="#f0e8d8" transform="rotate(288)"/>
+          <circle cx="0" cy="0" r="5.5" fill="#fff8f0"/>
+          <circle cx="0" cy="0" r="2.5" fill="#ffe9b0"/>
         </g>
 
-        <!-- Baby's breath dots -->
-        <g fill="white" opacity="0.7">
-          <circle cx="134" cy="155" r="3"/><circle cx="127" cy="162" r="2.5"/>
-          <circle cx="140" cy="148" r="2"/><circle cx="178" cy="152" r="3"/>
-          <circle cx="185" cy="160" r="2.5"/><circle cx="172" cy="158" r="2"/>
-          <circle cx="205" cy="170" r="2.5"/><circle cx="110" cy="185" r="2"/>
-          <circle cx="106" cy="178" r="2.5"/><circle cx="225" cy="190" r="2"/>
-          <circle cx="228" cy="182" r="2.5"/>
+        <!-- ── LAVENDER sprigs ── -->
+        <g transform="translate(112,225)" fill="#c09ae0">
+          <ellipse cx="0" cy="-10" rx="4" ry="6"/>
+          <ellipse cx="-5" cy="-4" rx="3.5" ry="5.5"/>
+          <ellipse cx="5" cy="-4" rx="3.5" ry="5.5"/>
+          <ellipse cx="-3" cy="3" rx="3" ry="5"/>
+          <ellipse cx="3" cy="3" rx="3" ry="5"/>
+          <circle cx="0" cy="-14" r="3" fill="#e0c8f8"/>
         </g>
+        <g transform="translate(194,212)" fill="#b88ed4">
+          <ellipse cx="0" cy="-8" rx="3.5" ry="5.5"/>
+          <ellipse cx="-4" cy="-2" rx="3" ry="5"/>
+          <ellipse cx="4" cy="-2" rx="3" ry="5"/>
+          <ellipse cx="-2" cy="4" rx="2.5" ry="4.5"/>
+          <ellipse cx="2" cy="4" rx="2.5" ry="4.5"/>
+          <circle cx="0" cy="-12" r="2.5" fill="#d8b8f0"/>
+        </g>
+
+        <!-- ── BABY'S BREATH ── -->
+        <g fill="white" opacity="0.55">
+          <circle cx="140" cy="160" r="2.2"/><circle cx="133" cy="167" r="1.8"/>
+          <circle cx="147" cy="155" r="1.6"/><circle cx="163" cy="148" r="2"/>
+          <circle cx="170" cy="142" r="1.8"/><circle cx="178" cy="150" r="2.2"/>
+          <circle cx="187" cy="160" r="1.8"/><circle cx="194" cy="170" r="2"/>
+          <circle cx="108" cy="218" r="2"/><circle cx="104" cy="226" r="1.7"/>
+          <circle cx="197" cy="200" r="2"/><circle cx="202" cy="192" r="1.8"/>
+          <circle cx="130" cy="184" r="1.8"/><circle cx="172" cy="158" r="1.6"/>
+          <circle cx="155" cy="145" r="2"/><circle cx="145" cy="174" r="1.6"/>
+        </g>
+
       </svg>
     </div>
     <p style="font-family:'Caveat',cursive; font-size:1.5rem; color:var(--pink); margin-top:0.5rem; animation:slideUp 0.5s 0.3s both;">
@@ -780,7 +798,7 @@
         REDEEMABLE BY: AMI ONLY · NO EXPIRY · NON-TRANSFERABLE
       </p>
       <p style="font-family:'Caveat',cursive; font-size:1.15rem; color:rgba(255,255,255,0.5); margin-bottom:2rem; line-height:1.6;">
-        Valid for: a proper FaceTime session, talking about everything and nothing, ugly-crying together over the distance, and planning when we're finally in the same city again. 🥹
+        Valid for: a proper FaceTime session, talking about everything and nothing, saying "fuck you, dude" across the distance, and planning when we're finally in the same city again. 🥹
       </p>
 
       <div id="claim-area">
@@ -868,293 +886,6 @@ setInterval(() => {
   nickEl.textContent = nicks[nickIdx];
 }, 1800);
 
-// ── CHOOSE YOUR OWN ADVENTURE ──
-const scenes = {
-  start: {
-    emoji: '🌅',
-    text: `It's your birthday, Ami. The sun is barely up. You open your eyes and the first thing you see is your reflection looking absolutely stunning for no reason at all. Classic. What do you do first?`,
-    choices: [
-      { label: '💅 Spend an hour getting dressed up (for absolutely nowhere)', next: 'dressed_up' },
-      { label: '🪴 Check on your plants and say good morning to them', next: 'plants_morning' },
-      { label: '📱 Check your phone for birthday messages', next: 'phone_check' },
-    ]
-  },
-  dressed_up: {
-    emoji: '👗',
-    text: `You spend a full hour getting ready. Hair. Outfit. Mirror check. Another mirror check. You look incredible. Objectively. Dangerously. You take three photos, delete two, keep one. Where are you going, Ami? Nowhere. You are going absolutely nowhere. What next?`,
-    choices: [
-      { label: '🏋️ Go to the gym looking like that. Slay the leg press.', next: 'gym_slay' },
-      { label: '🪴 Visit your plants in your birthday outfit', next: 'plants_outfit' },
-      { label: '📞 FaceTime me looking this good', next: 'facetime_dressed' },
-    ]
-  },
-  plants_morning: {
-    emoji: '🪴',
-    text: `You walk to your plants. You say "Good morning babies." One of them looks... concerning. A little yellow. A little sad. A little done with your excuses. You SWEAR you watered it last week. Or was it the week before? What do you do?`,
-    choices: [
-      { label: '💧 Water it immediately and apologize profusely', next: 'plant_apology' },
-      { label: '🤔 Google "why is my plant yellow" for the 47th time', next: 'plant_google' },
-      { label: '🛒 Decide to just... buy a new one', next: 'plant_replace' },
-    ]
-  },
-  phone_check: {
-    emoji: '📱',
-    text: `You grab your phone. Notifications everywhere. But most importantly — there's a long message from me. The one who is very far away and is definitely not crying right now. (I am crying.) You read it. Your heart does a little thing. What do you do?`,
-    choices: [
-      { label: '😭 Cry immediately. Full ugly cry. Birthday tears.', next: 'cry_happy' },
-      { label: '📞 Call me RIGHT NOW even though it might be 3am my time', next: 'facetime_early' },
-      { label: '💬 Reply with 47 emojis and zero words', next: 'emoji_reply' },
-    ]
-  },
-  gym_slay: {
-    emoji: '🏋️',
-    text: `You walk into the gym looking like you're about to headline a fashion show. Everyone stares. You ignore them. You head straight to the leg press. You load it up. You destroy it. Absolutely demolish it. Your legs tomorrow will hate you but your ego right now? Thriving. What's the move after?`,
-    choices: [
-      { label: '🤳 Post a gym selfie. You earned it, Mama.', next: 'gym_selfie' },
-      { label: '📞 FaceTime me sweaty and out of breath', next: 'facetime_sweaty' },
-      { label: '🍰 Treat yourself to birthday cake. You just earned 1000 calories back.', next: 'cake_ending' },
-    ]
-  },
-  plants_outfit: {
-    emoji: '🌿',
-    text: `You stand in front of your plants in your full birthday outfit. You look stunning. They look... alive. Barely. One of them is definitely judging you for the outfit. Or maybe for the lack of watering. Hard to tell. You give it a little water as a birthday treat to yourself. It accepts. Reluctantly.`,
-    choices: [
-      { label: '📸 Take a photo with your plants. Cottagecore era activated.', next: 'plant_photo_ending' },
-      { label: '📞 FaceTime me to show off the outfit AND the plants', next: 'facetime_dressed' },
-    ]
-  },
-  facetime_dressed: {
-    emoji: '📞',
-    text: `You FaceTime me. I pick up immediately like I was waiting. I gasp when I see the outfit. "MAMA." You grin. You and I spend the next two hours talking about everything — your dating disasters, your plant graveyard, that one time in high school neither of us should bring up but both of us are thinking about. You know the one. What happens next?`,
-    choices: [
-      { label: '😤 You and I roast each other about the distance', next: 'cry_distance_ending' },
-      { label: '💀 I bring up The Incident. You pretend not to remember.', next: 'incident_ending' },
-      { label: '🥂 You make me watch you eat birthday cake on camera', next: 'cake_ending' },
-    ]
-  },
-  plant_apology: {
-    emoji: '💧',
-    text: `You water the plant. You apologize. You actually say sorry out loud to a plant on your birthday. "I'm so sorry. I've been busy. You deserve better." The plant says nothing. It is a plant. But somehow you feel like it accepted your apology. For now. I would have so much to say about this moment.`,
-    choices: [
-      { label: '📞 FaceTime me and tell me what just happened', next: 'facetime_plant_ending' },
-      { label: '🏋️ Cope by going to the gym immediately', next: 'gym_slay' },
-    ]
-  },
-  plant_google: {
-    emoji: '🔍',
-    text: `You Google it. "Overwatering OR underwatering." The internet gives you both answers simultaneously. You have no idea which one applies. You have never known. You have been googling this same question for two years. Your plant watches you scroll. It is tired. You are tired. This is your dynamic.`,
-    choices: [
-      { label: '💀 Accept the chaos. You are a plant graveyard and you own it.', next: 'plant_chaos_ending' },
-      { label: '🛒 Buy a new plant. Fresh start. New me. (We\'ve heard this before.)', next: 'plant_replace' },
-    ]
-  },
-  plant_replace: {
-    emoji: '🛍️',
-    text: `You go to the plant store. You pick out the prettiest one. The woman at the counter says "this one is low maintenance!" You smile and nod. You have heard this before. You have buried low maintenance plants before. You bring it home and introduce it to the others. The others look nervous. Welcome to the graveyard, little guy.`,
-    choices: [
-      { label: '📞 FaceTime me to show me the new victim', next: 'facetime_plant_ending' },
-      { label: '💪 Feel so good about yourself you go to the gym', next: 'gym_slay' },
-    ]
-  },
-  cry_happy: {
-    emoji: '😭',
-    text: `You read the message. Your heart does a whole thing. You text back something completely unhinged like "dude what is wrong with you" which is how you say "this made me feel things." I know. I always know. I am very far away and definitely not staring at my phone waiting for your reply. (I am staring at my phone.)`,
-    choices: [
-      { label: '📞 Call me immediately and open with "I hate you" (you don\'t)', next: 'facetime_cry_ending' },
-      { label: '💅 Recover, reapply, get dressed up. I would want that.', next: 'dressed_up' },
-    ]
-  },
-  facetime_early: {
-    emoji: '📞',
-    text: `I pick up on the first ring. My hair is a mess. It is extremely early where I am. I do not care even a little. "HAPPY BIRTHDAY BRO." You and I talk for three hours. I bring up that one time you wore that thing to that place and did that thing. You know exactly what I mean. You pretend you don't. I know you remember. I always know.`,
-    choices: [
-      { label: '💀 I actually bring up The Incident. Game over.', next: 'incident_ending' },
-      { label: '😤 You and I argue about the distance by roasting each other.', next: 'cry_distance_ending' },
-    ]
-  },
-  emoji_reply: {
-    emoji: '💬',
-    text: `You send back 47 emojis. 🥹🥹💛✨🌸😭🤜🤛👑🔥💀😂🥺. I reply: "I don't do colorful emojis or understand any of that, but I love you." You stare at the screen. You are smiling. This is why I'm your person. No translation needed.`,
-    choices: [
-      { label: '📞 Follow up with a FaceTime immediately', next: 'facetime_dressed' },
-      { label: '💅 Get dressed up to celebrate properly', next: 'dressed_up' },
-    ]
-  },
-  gym_selfie: {
-    emoji: '🤳',
-    text: `You post the selfie. Caption: just a birthday workout 💪. Thirteen people reply "you look amazing." You already knew. I comment something chaotic that makes you laugh out loud in the middle of the gym. A man nearby tries to make eye contact. You do not. Goodbye, sir.`,
-    choices: [
-      { label: '📞 Call me to discuss the gym encounter', next: 'dating_story_ending' },
-      { label: '🍰 Go home and eat birthday cake in peace like a queen', next: 'cake_ending' },
-    ]
-  },
-  facetime_sweaty: {
-    emoji: '📞',
-    text: `You FaceTime me immediately post-workout. Sweaty. Glowing. Slightly unhinged. I am delighted. "You destroyed it didn't you." Yes. Yes you did. You tell me your latest dating disaster while you stretch. It is a lot. It is always a lot. I love every second of it. We talk for so long you forget you're still in the gym parking lot.`,
-    choices: [
-      { label: '💀 The dating story takes a turn. You are judging so hard.', next: 'dating_story_ending' },
-      { label: '🍰 I make you promise to eat cake. You go eat cake.', next: 'cake_ending' },
-    ]
-  },
-
-  // ── ENDINGS ──
-  cake_ending: {
-    emoji: '🎂',
-    text: `You eat the cake. It is perfect. You are sitting somewhere comfortable, looking the way you always look, and for a moment everything is soft and good and exactly right. Another year. Another birthday. You made it here, bro, and you are so loved.`,
-    ending: true,
-    badge: '🎂 BEST ENDING: CAKE QUEEN',
-    note: `I'm lactose intolerant and severely allergic to eggs but I'll listen to your dessert reviews and how you like each of them. I don't know the taste but I'm willing to bake them with no sense of taste so you can enjoy it. — me, proudly 💛`
-  },
-  cry_distance_ending: {
-    emoji: '🥹',
-    text: `You FaceTime me about the distance. You say "Fuck you, dude." I say "Fuck you too." Neither of us elaborates. Neither of us needs to. The miles are real but so is this. So is all of it. One day the distance will close and when it does — bestie date. Princess treatment. On me.`,
-    ending: true,
-    badge: '🥹 TRUE ENDING: LONG DISTANCE BESTIES',
-    note: `"Fuck you, dude." "Fuck you too." That's us. That's everything. Happy birthday, bro. 💛`
-  },
-  incident_ending: {
-    emoji: '💀',
-    text: `I brought up The Incident. You know the one. That time in your teenage years that shall not be named, that you told yourself you had forgotten, but me — I have the memory of an elephant specifically for your most chaotic moments. I am cackling. You are mortified. You are also laughing. This is the friendship.`,
-    ending: true,
-    badge: '💀 CHAOS ENDING: I REMEMBER EVERYTHING',
-    note: `I will never let you forget it. That's in the bestie contract. Happy birthday, Mama 😂💛`
-  },
-  facetime_cry_ending: {
-    emoji: '📞',
-    text: `You FaceTime me. You and I don't cry — we roast each other across the distance instead, which is the same thing really. At some point you call me "bro" for the fourteenth time and I call you "dude" back and somehow that says everything. 21 years and beyond. You are my person and I am yours.`,
-    ending: true,
-    badge: '✨ GOLDEN ENDING: 21 YEARS & BEYOND',
-    note: `Every FaceTime ends with "okay bye dude" said five times before anyone actually hangs up. I wouldn't change a single second. Love you most. 🥹💛`
-  },
-  facetime_plant_ending: {
-    emoji: '🪴',
-    text: `You show me the plant on FaceTime. I stare at it for a long time. "Dude, listen..." I start. You already know what I'm going to say. The plant looks rough. I look at you. You look back. I sigh. "The plant will probably not make it. But you will. That's the one that matters. Happy birthday, plant mom. I believe in you. Mostly."`,
-    ending: true,
-    badge: '🌱 SOFT ENDING: CERTIFIED PLANT MOM (IN SPIRIT)',
-    note: `I will attend every plant funeral you host. That's love. 💛🪴`
-  },
-  plant_photo_ending: {
-    emoji: '📸',
-    text: `You take the photo. You look stunning. Your plants look... present. Alive enough. The composition is actually gorgeous. You send it to me. I reply: "Mama. The FIT." Not a word about the plants. I know better. I love you anyway.`,
-    ending: true,
-    badge: '💅 SLAY ENDING: OUTFIT OVER EVERYTHING',
-    note: `The photo was genuinely stunning and I will not be taking further questions. Happy birthday, Mama. 👑`
-  },
-  plant_chaos_ending: {
-    emoji: '🌵',
-    text: `You accept it. You are the villain in every plant's story. The grim reaper of succulents. The reason ferns have trust issues. And yet — you keep buying them. You keep trying. That's kind of beautiful actually. Chaotic, yes. A little unhinged, yes. But you keep showing up. That counts for something.`,
-    ending: true,
-    badge: '🌵 CHAOTIC ENDING: PLANT GRAVEYARD CEO',
-    note: `I say this with love: you are a menace to the botanical world. Happy birthday anyway. 💀💛`
-  },
-  dating_story_ending: {
-    emoji: '👀',
-    text: `The story. Oh, the story. You tell it. I gasp. I say "NO." You say yes. I say "HE DIDN'T." He did. By the end of it I am lying on the floor emotionally exhausted from someone else's romantic disaster. You are laughing at me lying on the floor. This is better than any birthday party.`,
-    ending: true,
-    badge: '👀 UNHINGED ENDING: THE DATING STORY ERA',
-    note: `If a man doesn't treat you better than how we celebrate you on your birthday — demolish him. That's the rule. 🔨💛`
-  },
-};
-
-let storyTrail = [];
-
-function renderScene(sceneKey) {
-  const scene = scenes[sceneKey];
-  if (!scene) return;
-
-  const emojiEl = document.getElementById('scene-emoji');
-  const textEl = document.getElementById('scene-text');
-  const choicesEl = document.getElementById('scene-choices');
-  const endingEl = document.getElementById('scene-ending');
-
-  // animate out
-  emojiEl.style.transform = 'scale(0.5)';
-  emojiEl.style.opacity = '0';
-  textEl.style.opacity = '0';
-  textEl.style.transform = 'translateY(10px)';
-
-  setTimeout(() => {
-    emojiEl.textContent = scene.emoji;
-    textEl.textContent = scene.text;
-
-    emojiEl.style.transition = 'all 0.4s cubic-bezier(0.34,1.56,0.64,1)';
-    emojiEl.style.transform = 'scale(1)';
-    emojiEl.style.opacity = '1';
-    textEl.style.transition = 'all 0.4s ease 0.1s';
-    textEl.style.opacity = '1';
-    textEl.style.transform = 'translateY(0)';
-
-    choicesEl.innerHTML = '';
-    endingEl.style.display = 'none';
-
-    if (scene.ending) {
-      document.getElementById('ending-badge').textContent = scene.badge;
-      document.getElementById('ending-note').textContent = scene.note;
-      endingEl.style.display = 'block';
-      // mini confetti on ending
-      createParticles(window.innerWidth / 2, window.innerHeight / 2, 50);
-      if (!animating) { animating = true; animateConfetti(); }
-    } else {
-      scene.choices.forEach((choice, i) => {
-        const btn = document.createElement('button');
-        btn.textContent = choice.label;
-        btn.style.cssText = `
-          background: rgba(255,255,255,0.05);
-          border: 1.5px solid rgba(255,255,255,0.12);
-          color: var(--white);
-          font-family: 'Caveat', cursive;
-          font-size: 1.15rem;
-          padding: 0.9rem 1.2rem;
-          border-radius: 14px;
-          cursor: none;
-          text-align: left;
-          transition: all 0.2s;
-          opacity: 0;
-          transform: translateY(8px);
-          line-height: 1.4;
-        `;
-        btn.addEventListener('mouseover', () => {
-          btn.style.background = 'rgba(255,233,78,0.1)';
-          btn.style.borderColor = 'rgba(255,233,78,0.4)';
-          btn.style.transform = 'translateX(6px)';
-        });
-        btn.addEventListener('mouseout', () => {
-          btn.style.background = 'rgba(255,255,255,0.05)';
-          btn.style.borderColor = 'rgba(255,255,255,0.12)';
-          btn.style.transform = 'translateX(0)';
-        });
-        btn.addEventListener('click', () => {
-          storyTrail.push(sceneKey);
-          updateTrail();
-          renderScene(choice.next);
-        });
-        choicesEl.appendChild(btn);
-        // stagger in
-        setTimeout(() => {
-          btn.style.transition = 'all 0.3s ease';
-          btn.style.opacity = '1';
-          btn.style.transform = 'translateY(0)';
-        }, 200 + i * 80);
-      });
-    }
-  }, 200);
-
-  // update trail
-  function updateTrail() {
-    const el = document.getElementById('story-trail');
-    el.textContent = storyTrail.map((_, i) => '◆').join('  ') + '  ◇';
-  }
-}
-
-function restartAdventure() {
-  storyTrail = [];
-  document.getElementById('story-trail').textContent = '';
-  renderScene('start');
-}
-
-// init
-renderScene('start');
-
 // ── PRANKS ──
 const pranks = [
   { title: "🌱 Plant Care Rating:", body: "Certified 0/10. Your plants didn't die, Ma'am. They ESCAPED. There's a support group for plants that survived you and they meet every Thursday. I'm their guest speaker." },
@@ -1165,7 +896,7 @@ const pranks = [
   { title: "🏆 Gym Trophy Unlocked!", body: "Congratulations! You have been awarded the 'Most Likely to Go Ghost on Our FaceTime for a 6am Workout' trophy. I'd say I'm proud but I'm still mad about being left on read. Okay fine I'm proud. Don't tell anyone. 🥹" },
   { title: "🚩 He's Different Though?", body: "Let me hold your hands when I say this. I am looking at you with my whole face right now. I am not blinking. The flags are so red they are practically a matador convention. I have never met this man and I am already tired. You have a type and that type is 'emotionally unavailable with a Spotify playlist that goes hard.' BOUNDARIES. We have them available. Please collect yours at the front desk. 😐" },
   { title: "🙄 Not Like Other Guys™", body: "He said that himself, didn't he. He looked you in the eye and said 'I'm not like other guys.' ISTG. BRO. THEY ALL SAY THAT. It's literally in the orientation packet they hand out. I am judging him with my entire nervous system. I am judging you for smiling when he said it. I saw that smile on FaceTime. I have it documented. 👁️" },
-  { title: "💀 He Was Actually Decent?!", body: "Wait. WAIT. He was kind? Consistent? Replied within a reasonable timeframe? Remembered things you said?? Ami what did you DO. Why are you making it weird. Let the man be normal at you. I am begging. I will get on my knees. Put the self-sabotage wrench DOWN. 😭😭" },
+  { title: "💀 He Was Actually Decent?!", body: "Wait. WAIT. He was kind? Consistent? Replied within a reasonable timeframe? Remembered things you said?? Why are you making it weird. Let the man be normal at you. I am begging. I will get on my knees. Put the self-sabotage wrench DOWN. 😭😭" },
   { title: "🫀 Dating Life: Rated", body: "Overall score: 3/10 for choices, 10/10 for storyline quality, 11/10 for the chaos you bring to my FaceTime screen. I have laughed, gasped, said 'no way' out loud alone in my room, and genuinely felt secondhand heartbreak — all in one sitting. You are a one-woman anthology series and I am your most devoted audience. Exhausted, but devoted. 🎬" },
   { title: "😮‍💨 You'll Take My Advice?", body: "No you won't. We both know you won't. I will give it anyway because I love you and that's the deal. Here it is: you deserve someone who makes it easy. Not exciting-because-it's-unstable. Not 'I keep him on his toes.' EASY. Warm. Consistent. Someone who treats you the way your friends celebrate you. Until then — demolish them and move on. 🔨💛" },
   { title: "🥹 How Am I Holding Up?", body: "Since you asked: I am TIRED, dude. I am tired on your behalf. I have processed more situationships than a licensed therapist and I don't even have the certification. My jaw has dropped so many times it has a muscle memory now. And yet — I will always pick up. I will always listen. I will always say 'dude. NO.' Because that's what I'm here for. Forever. 💛" },
