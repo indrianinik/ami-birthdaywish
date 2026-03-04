@@ -830,10 +830,15 @@
 <script>
 // ── CURSOR ──
 const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+if (isTouchDevice) {
+  cursor.style.display = 'none';
+} else {
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+}
 
 // ── FLOATING EMOJIS ──
 const emojis = ['🎂','🎈','✨','🎉','💛','🎊','🌸','💜','⭐','🍰'];
