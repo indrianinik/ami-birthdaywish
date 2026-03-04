@@ -40,6 +40,11 @@
     mix-blend-mode: difference;
   }
 
+  @media (hover: none) and (pointer: coarse) {
+    .cursor { display: none !important; }
+    body { cursor: auto; }
+  }
+
   /* Confetti canvas */
   #confetti-canvas {
     position: fixed;
